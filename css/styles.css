@@ -8,6 +8,8 @@
 --background-light-btn:#F5F4FA;
 --dark-logo:#000000;
 --background-grey:#F5F4FA;
+--color-header-border:#ECECEC;
+--color-portfolio-border:#EEEEEE;
 }
 
 h1,
@@ -89,13 +91,14 @@ body{
 .page-header {
     padding-top: 24px;
     padding-bottom: 25px;
-
+    border-bottom: 1px solid var(--color-header-border);
 }
 
 .menu {
     display: flex;
     align-items: center;
     column-gap: 50px ;
+    
 }
 
 .menu-contact {
@@ -111,6 +114,9 @@ body{
     letter-spacing: 0.02em;
     font-weight: 500;
     color: var(--color-dark);
+    padding-top: 24px ;
+    padding-bottom: 25px;
+
 }
 
 .menu-link:hover,
@@ -147,6 +153,14 @@ body{
     text-transform: uppercase;
 }
 
+.container-backgroud-section {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+
 .header-second-work {
     font-family: 'Roboto',sans-serif;
     font-weight: 700;
@@ -156,8 +170,7 @@ body{
     color: var(--color-dark);
     display: flex;
     justify-content:center;
-    padding: 50px;
-    
+    margin-bottom: 50px;
 }
 
 .header-portfolio {
@@ -167,8 +180,7 @@ body{
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--color-dark);
-    padding-top: 20px;
-    padding-left: 24px;
+    margin-bottom: 4px;
 }
 
 .portfolio-page {
@@ -178,8 +190,6 @@ body{
     line-height: 1.87;
     letter-spacing: 0.03em;
     color:var(--primary-text-color);
-    padding-top: 20px;
-    padding-left: 24px;
 }
 
 .header-speciality {
@@ -209,9 +219,10 @@ body{
     font-weight: 500;
     letter-spacing: 0.03em;
     color: var(--color-dark);
+    margin-bottom: 10px;
 }
 
-.about-team{
+.about-team {
     font-family: 'Roboto', sans-serif; 
     font-size: 16px ;
     font-weight: 400;
@@ -234,7 +245,12 @@ body{
     line-height: 1.87;
     letter-spacing: 0.06em;
     color:var(--white-color);
-    background-color: var(--accent-color);   
+    background-color: var(--accent-color);  
+    display: block;
+    padding: 10px 32px ;
+    min-width: 216;
+    margin-top: 30px;
+    border: 0;
 }
 
 .modal-open-btn:hover,
@@ -250,6 +266,10 @@ body{
     
 }
 
+.section.about {
+    padding-top: 0;
+ }
+
 .menu-img {
     display: flex;
     flex-wrap: wrap;
@@ -261,13 +281,31 @@ body{
     flex-wrap: wrap;
     gap: 30px;
 }
-.backgroud-section{
-    background-color: var(--background-dark);
+
+.container-team-item {
+    padding-top: 30px;
+    padding-bottom: 30px;  
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
 }
 
-.background-footer{
-    background-color:var(--background-dark) ;
+.backgroud-section {
+    background-color: var(--background-dark);
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
+
+.background-footer {
+    background-color:var(--background-dark) ;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.menu-address-item:not(:last-child){
+    margin-bottom: 9px;
+}
+
 
 .location {
     font-family: 'Roboto', sans-serif;
@@ -300,7 +338,19 @@ body{
     color: var(--accent-color);
 }
 
-.menu-button-item{
+.logo-down {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+
+.container-logo-down{
+    margin-bottom: 20px;
+}
+
+.menu-button-item {
     background-color: var(--background-light-btn);
     color:var(--color-dark);
     font-family: 'Roboto';
@@ -310,8 +360,7 @@ body{
     letter-spacing: 0.03em;
     padding: 6px 22px;
     border: none;
-    margin-right: 8px;
-    margin-bottom: 50px;
+  
 }
 
 .menu-button-item:hover,
@@ -320,14 +369,15 @@ body{
     color: var(--white-color);
 }
 
-.menu-button-item:last-child {
-    margin-right:0px;
+.menu-button-item:not(last-child) {
+    margin-right: 8px;
 }
 
 .menu-button {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .visually-hidden {
@@ -352,7 +402,14 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    flex-basis: calc((100%-60px)/3);
+}
 
+.portfolio-about{
+    padding: 20px 24px 54px 24px;
+    border-bottom: 1px solid var(--color-portfolio-border);
+    border-right: 1px solid var(--color-portfolio-border);
+    border-left: 1px solid var(--color-portfolio-border);
 }
 
 .background-our-team{
